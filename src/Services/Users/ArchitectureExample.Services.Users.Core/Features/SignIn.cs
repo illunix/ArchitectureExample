@@ -1,4 +1,7 @@
-﻿using ArchitectureExample.Services.Users.Core.Services.Abstractions;
+﻿using ArchitectureExample.Services.Users.Core.DAL.Abstractions;
+using ArchitectureExample.Services.Users.Core.Exceptions;
+using ArchitectureExample.Services.Users.Core.Services.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using Phaeton.Auth.JWT.Abstractions;
 using Phaeton.Mediator;
 using Phaeton.Utilities;
@@ -35,11 +38,10 @@ public sealed partial class SignIn
         Command req,
         IPasswordManager pwdMgr,
         ITokenStorage tokenStorage,
-        // IUsersDbContext ctx,
+        IUsersDbContext ctx,
         IJsonWebTokenManager jwtMgr
     )
     {
-        /*
         var user = await ctx.Users.FirstOrDefaultAsync(q => q.Email == req.Email);
         if (
             user is null ||
@@ -55,6 +57,5 @@ public sealed partial class SignIn
             user.Id,
             user.Email
         ));
-        */
     }
 }

@@ -48,11 +48,10 @@ public sealed partial class SignUp
     public static async Task Handler(
         Command req,
         IPasswordManager pwdMgr,
-        IIdGen idGen
-        // IUsersDbContext ctx
+        IIdGen idGen,
+        IUsersDbContext ctx
     )
     {
-        /*
         if (await ctx.Users
             .AnyAsync(q => q.Email == req.Email)
             .ConfigureAwait(false)
@@ -76,6 +75,5 @@ public sealed partial class SignUp
         await ctx
             .SaveChanges()
             .ConfigureAwait(false);
-        */
     }
 }
