@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Phaeton.Auth" Version="1.0.2" />
+    <PackageReference Include="Phaeton.DAL.Postgres" Version="1.0.1" />
+    <PackageReference Include="Phaeton.DAL.Postgres.DbContext.Generator" Version="1.0.6" />
+    <PackageReference Include="Phaeton.DependencyInjection.Generator" Version="1.0.9" />
+    <PackageReference Include="Phaeton.Framework" Version="1.0.1" />
+    <PackageReference Include="Phaeton.Mediator.Generator" Version="1.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\ArchitectureExample.Shared.Core.DAL\ArchitectureExample.Shared.Core.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
